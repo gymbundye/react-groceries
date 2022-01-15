@@ -10,7 +10,7 @@ class App extends Component {
         groceries:[],
       }
     }
-      getList=(list)=>{
+      makeList=(list)=>{
         this.setState({groceries:[...this.state.groceries,list]})
       }
       
@@ -19,8 +19,8 @@ class App extends Component {
         return(
           <div className="App">
 
-          <Grocery getList={this.getList}/>
-          <Grocerylist getgroceries={this.state.groceries}/>
+          <Grocery makeList={this.makeList}/>
+          <Grocerylist getGroceryList={this.state.groceries}/>
 
 
           </div>
